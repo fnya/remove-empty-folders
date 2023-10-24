@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"id": "remove-empty-folders",
+	"name": "Remove Empty Folders",
+	"version": "0.0.1",
+	"minAppVersion": "0.0.0",
+	"description": "This is a plugin to remove empty folders.",
+	"author": "fnya",
+	"authorUrl": "https://github.com/fnya",
+	"isDesktopOnly": true
 }
