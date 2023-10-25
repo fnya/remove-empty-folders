@@ -18,13 +18,13 @@ export default class RemoveEmptyFoldersPlugin extends Plugin {
 
 		this.registerEvent(
 			this.app.workspace.on("file-menu", (menu, file) => {
-				menu.addItem((item) => {
-					item.setTitle("Remove empty folders").onClick(async () => {
-						if (file instanceof TFolder) {
+				if (file instanceof TFolder) {
+					menu.addItem((item) => {
+						item.setTitle("Remove empty folders").onClick(async () => {
 							removeEmptyFolders(this.app, file);
-						}
+						});
 					});
-				});
+				}
 			})
 		);
 	}
