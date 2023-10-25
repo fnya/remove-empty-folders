@@ -8,7 +8,7 @@ export default class RemoveEmptyFoldersPlugin extends Plugin {
 					item.setTitle("Remove empty folders").onClick(async () => {
 						files.forEach((file) => {
 							if (file instanceof TFolder) {
-								removeEmptyFolders(this.app, file as TFolder);
+								removeEmptyFolders(this.app, file);
 							}
 						});
 					});
@@ -21,7 +21,7 @@ export default class RemoveEmptyFoldersPlugin extends Plugin {
 				menu.addItem((item) => {
 					item.setTitle("Remove empty folders").onClick(async () => {
 						if (file instanceof TFolder) {
-							removeEmptyFolders(this.app, file as TFolder);
+							removeEmptyFolders(this.app, file);
 						}
 					});
 				});
