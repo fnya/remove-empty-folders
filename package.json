@@ -1,7 +1,7 @@
 {
 	"name": "remove-empty-folders",
 	"version": "0.0.1",
-	"description": "This is a plugin to remove empty folders.",
+	"description": "Easily remove empty folders.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
