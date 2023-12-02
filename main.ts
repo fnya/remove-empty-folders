@@ -1,4 +1,4 @@
-import { App, Plugin, TFolder } from "obsidian";
+import { App, Notice, Plugin, TFolder } from "obsidian";
 
 export default class RemoveEmptyFoldersPlugin extends Plugin {
 	async onload() {
@@ -21,7 +21,12 @@ export default class RemoveEmptyFoldersPlugin extends Plugin {
 				if (file instanceof TFolder) {
 					menu.addItem((item) => {
 						item.setTitle("Remove empty folders").onClick(async () => {
+							const notice = new Notice(`Removing empty folders !!`);
+							console.log("Removing empty folders !!");
 							removeEmptyFolders(this.app, file);
+							notice.hide();
+							new Notice(`Empty folders removed !!`);
+							console.log("Empty folders removed !!");
 						});
 					});
 				}
